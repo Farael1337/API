@@ -1,5 +1,5 @@
-app = "api.py"
-primary_region = "ams"  # Ваш регион
+app = "api"
+primary_region = "ams"
 
 [build]
   builder = "paketobuildpacks/builder:base"
@@ -7,6 +7,6 @@ primary_region = "ams"  # Ваш регион
 [env]
   PORT = "8080"
 
-[http_service]
+[[services]]
   internal_port = 8080
-  force_https = true
+  protocol = "tcp"
